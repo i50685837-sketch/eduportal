@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Pending | EduPortal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,40,120,.75),rgba(0,80,170,.75)),
+    url("https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1800&q=80");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.container{
+    width:450px;
+    padding:40px;
+    text-align:center;
+    color:#fff;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(18px);
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.25);
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+    animation:fadeIn .8s ease;
+}
+
+.icon{
+    font-size:70px;
+    margin-bottom:15px;
+}
+
+h1{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.status{
+    display:inline-block;
+    background:#ff9800;
+    color:#fff;
+    padding:8px 18px;
+    border-radius:30px;
+    font-weight:600;
+    margin:15px 0;
+}
+
+p{
+    line-height:1.8;
+    color:#eef5ff;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:block;
+    width:100%;
+    text-decoration:none;
+    padding:15px;
+    margin-top:15px;
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.home{
+    background:#0066ff;
+    color:#fff;
+}
+
+.home:hover{
+    background:#004dcc;
+}
+
+.login{
+    background:#00c853;
+    color:#fff;
+}
+
+.login:hover{
+    background:#00a844;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:768px){
+
+.container{
+    width:92%;
+    padding:30px 20px;
+}
+
+h1{
+    font-size:28px;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="icon">⏳</div>
+
+<h1>Registration Submitted</h1>
+
+<div class="status">
+Pending Approval
+</div>
+
+<p>
+Thank you for registering with <b>EduPortal</b>.<br><br>
+
+Your registration request has been successfully submitted to the system administrator for verification.
+
+You will receive access to your student account only after your registration has been reviewed and approved.
+</p>
+
+<a href="index.html" class="btn home">
+🏠 Return to Home
+</a>
+
+<a href="login.html" class="btn login">
+🔐 Go to Student Login
+</a>
+
+</div>
+
+</body>
+</html>
