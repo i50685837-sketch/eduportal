@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forgot Password | EduPortal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,40,120,.75),rgba(0,80,170,.75)),
+    url("https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1800&q=80");
+    background-size:cover;
+    background-position:center;
+}
+
+.container{
+    width:430px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(18px);
+    border-radius:20px;
+    padding:35px;
+    color:#fff;
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
+
+.logo{
+    text-align:center;
+    font-size:60px;
+}
+
+h1{
+    text-align:center;
+    margin-top:10px;
+}
+
+.subtitle{
+    text-align:center;
+    margin-bottom:25px;
+    color:#eee;
+}
+
+.input-box{
+    margin-bottom:18px;
+}
+
+.input-box input,
+.input-box textarea{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+}
+
+textarea{
+    resize:none;
+    height:90px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#ff9800;
+    color:#fff;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#e68900;
+}
+
+.notice{
+    margin-top:20px;
+    background:rgba(255,255,255,.12);
+    padding:12px;
+    border-radius:10px;
+    font-size:14px;
+    text-align:center;
+}
+
+.links{
+    margin-top:20px;
+    text-align:center;
+}
+
+.links a{
+    color:#fff;
+    text-decoration:none;
+    display:block;
+    margin-top:10px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="logo">🔑</div>
+
+<h1>Forgot Password</h1>
+
+<p class="subtitle">
+Identity Verification Request
+</p>
+
+<form id="forgotForm">
+
+<div class="input-box">
+<input type="text" placeholder="Full Name" required>
+</div>
+
+<div class="input-box">
+<input type="text" placeholder="Admission Number" required>
+</div>
+
+<div class="input-box">
+<input type="email" placeholder="Student Email" required>
+</div>
+
+<div class="input-box">
+<input type="tel" placeholder="Phone Number" required>
+</div>
+
+<div class="input-box">
+<textarea placeholder="Reason for Password Reset" required></textarea>
+</div>
+
+<button type="submit">
+📨 Submit Reset Request
+</button>
+
+</form>
+
+<div class="notice">
+Your request will be sent to the system administrator for verification. Once approved, your password reset request will be processed.
+</div>
+
+<div class="links">
+<a href="login.html">← Back to Login</a>
+<a href="index.html">🏠 Home</a>
+</div>
+
+</div>
+
+<script>
+document.getElementById("forgotForm").addEventListener("submit",function(e){
+e.preventDefault();
+window.location.href="password-reset-pending.html";
+});
+</script>
+
+</body>
+</html>
