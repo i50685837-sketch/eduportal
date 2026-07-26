@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration | EduPortal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,40,120,.75),rgba(0,80,170,.75)),
+    url("https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1800&q=80");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.container{
+    width:420px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(18px);
+    border-radius:20px;
+    padding:35px;
+    color:#fff;
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:5px;
+    font-size:34px;
+}
+
+h3{
+    text-align:center;
+    margin-bottom:25px;
+    font-weight:400;
+}
+
+.input-box{
+    margin-bottom:18px;
+}
+
+.input-box input{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#00c853;
+    color:#fff;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#00a844;
+}
+
+.notice{
+    margin-top:20px;
+    padding:14px;
+    background:rgba(255,255,255,.12);
+    border-radius:10px;
+    text-align:center;
+    font-size:14px;
+}
+
+.links{
+    margin-top:20px;
+    text-align:center;
+}
+
+.links a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>🎓 EduPortal</h1>
+<h3>Student Registration</h3>
+
+<form id="registerForm">
+
+<div class="input-box">
+<input
+type="text"
+name="fullname"
+placeholder="Full Name"
+required>
+</div>
+
+<div class="input-box">
+<input
+type="email"
+name="email"
+placeholder="Student Email"
+required>
+</div>
+
+<div class="input-box">
+<input
+type="tel"
+name="phone"
+placeholder="Phone Number"
+required>
+</div>
+
+<div class="input-box">
+<input
+type="text"
+name="admission"
+placeholder="Admission Number"
+required>
+</div>
+
+<div class="input-box">
+<input
+type="password"
+name="password"
+placeholder="Create Password"
+required>
+</div>
+
+<div class="input-box">
+<input
+type="password"
+name="confirmPassword"
+placeholder="Confirm Password"
+required>
+</div>
+
+<button type="submit">
+✅ Submit Registration
+</button>
+
+</form>
+
+<div class="notice">
+Your registration request will be submitted for administrator approval. You can log in only after your account has been approved.
+</div>
+
+<div class="links">
+<a href="student-login.html">Already Approved? Login Here</a>
+</div>
+
+</div>
+
+<script>
+document.getElementById("registerForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    // Later you will send this data to your backend/database.
+
+    window.location.href = "submit-registration.html";
+});
+</script>
+
+</body>
+  </html>
